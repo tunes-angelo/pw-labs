@@ -18,9 +18,84 @@
     font-weight: normal;
     font-style: bold;
 }
-  
+
+@font-face {
+    font-family: "BarlowLight";
+    src: url('../fonts/barlow-light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: light;
+}
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+}
+
+.footer {
+    position: fixed;
+    text-align: left;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3e3e3e;
+    color: #ffffff;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+.banner {
+    font-family: 'BarlowBold', Tahoma, Calibri, sans-serif;
+    text-align: center;
+    margin: 2rem;
+}
+
+.button {
+    display: block;
+    background-color: #3e3e3e;
+    border: 1px solid #4e4e4e;
+    border-radius: .75rem;
+    font-family: 'BarlowLight', Tahoma, Calibri, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .50rem 1.75rem;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin: 0.75rem;
+}
 .copyright {
+    font-family: 'BarlowBold', Tahoma, Calibri, sans-serif;
+    color: #ffffff;
+    padding: 0.75rem;
+}
+
+.password {
     font-family: 'BarlowItalic', Tahoma, Calibri, sans-serif;
     text-align: center;
     color: rgb(95, 149, 221);
 }
+
+.logo {
+    text-align: center;
+}
+
+.center-h {
+    display: flex;
+    justify-content: center;
+}
+
+.center-v {
+   display: flex;
+   align-items: center;
+}
+  
+  
