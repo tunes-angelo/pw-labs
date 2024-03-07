@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "BarlowRegular";
+    src: url('../fonts/barlow-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BarlowBold";
+    src: url('../fonts/barlow-bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "BarlowItalic";
+    src: url('../fonts/barlow-italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: bold;
+}
+  
+.copyright {
+    font-family: 'BarlowItalic', Tahoma, Calibri, sans-serif;
+    text-align: center;
+    color: rgb(95, 149, 221);
+}
