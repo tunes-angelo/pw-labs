@@ -106,7 +106,7 @@ body {
     margin: auto;
     width: 20vh;
     height: auto;
-    padding: 1.5rem;
+    padding: 1.3rem;
 }
 
 .center-h {
@@ -137,4 +137,20 @@ body {
     padding: 2rem;
     text-align: center;
     border-radius: .75rem;
+}
+
+@media screen and (max-width: 800px) {
+    .banner {
+        font-size: 7vh;
+    }
+    .form {
+        width: 20vh;
+        height: auto;
+    }
+
+    .button {
+        font-size: 3vh;
+        width: 25vh;
+        height: 7vh; 
+    }
 }
