@@ -48,9 +48,16 @@ body {
     width: 100%;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: #3e3e3e;
+    background-color: #2b2b2b;
     color: #e0e0e0;
-    /*border: 1px solid #a7a7a7;*/
+    /*border-top: 1px solid #4e4e4e;*/
+}
+.copyright {
+    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
+    color: #f8f8f8;
+    font-size: 0.75rem;
+    padding: 0.10rem;
+    margin: 0.30rem;
 }
 
 .banner {
@@ -86,13 +93,6 @@ body {
     transition: 0.7s;
 }
 
-.copyright {
-    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
-    color: #f8f8f8;
-    font-size: 0.75rem;
-    padding: 0.75rem;
-}
-
 .fpassword {
     font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
     text-align: center;
@@ -104,7 +104,7 @@ body {
 .logo {
     text-align: center;
     margin: auto;
-    width: 128px;
+    width: 20vh;
     height: auto;
     padding: 1.5rem;
 }
@@ -129,7 +129,7 @@ body {
 
 .form {
     position: relative;
-    z-index: 1;
+    z-index: -1;
     background: #2b2b2b;
     border: 1px solid #4e4e4e;
     max-width: 200px;
