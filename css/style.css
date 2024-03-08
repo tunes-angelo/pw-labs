@@ -1,37 +1,43 @@
 @font-face {
-    font-family: "BarlowRegular";
-    src: url('../fonts/barlow-regular.woff2') format('woff2');
+    font-family: "PublicSansRegular";
+    src: url('../fonts/publicsans-regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "BarlowBold";
-    src: url('../fonts/barlow-bold.woff2') format('woff2');
+    font-family: "PublicSansBold";
+    src: url('../fonts/publicsans-bold.woff2') format('woff2');
     font-weight: normal;
     font-style: bold;
 }
 
 @font-face {
-    font-family: "BarlowItalic";
-    src: url('../fonts/barlow-italic.woff2') format('woff2');
+    font-family: "PublicSansItalic";
+    src: url('../fonts/publicsans-italic.woff2') format('woff2');
     font-weight: normal;
     font-style: bold;
 }
 
 @font-face {
-    font-family: "BarlowLight";
-    src: url('../fonts/barlow-light.woff2') format('woff2');
+    font-family: "PublicSansLight";
+    src: url('../fonts/publicsans-light.woff2') format('woff2');
     font-weight: normal;
     font-style: light;
 }
 
 body {
-    background-color: #f8f8f8;
+    background-color: #1f1f1f;
     display: flex;
     justify-content: center;
     align-items: center;
     /*min-height: 100vh;*/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer {
@@ -40,52 +46,67 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
     background-color: #3e3e3e;
-    color: #ffffff;
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    color: #e0e0e0;
+    /*border: 1px solid #a7a7a7;*/
 }
 
 .banner {
-    font-family: 'BarlowBold', Tahoma, Calibri, sans-serif;
+    font-family: 'PublicSansBold', Tahoma, Calibri, sans-serif;
+    font-size: 3.5rem;
     text-align: center;
     margin: 2rem;
+    color: #e0e0e0;
 }
 
 .button {
     display: block;
+    width: 11rem;
+    height: 3rem;
     background-color: #3e3e3e;
     border: 1px solid #4e4e4e;
     border-radius: .75rem;
-    font-family: 'BarlowLight', Tahoma, Calibri, sans-serif;
+    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
-    padding: .50rem 1.75rem;
-    color: #FFFFFF;
+    /*padding: .50rem 1.75rem;*/
+    color: #e0e0e0;
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
     flex: 0 0 auto;
-    margin: 0.75rem;
+    margin: 0.5rem;
 }
+
+.button:hover {
+    border: 1px solid #979797;
+    color: #e0e0e0;
+    transition: 0.7s;
+}
+
 .copyright {
-    font-family: 'BarlowBold', Tahoma, Calibri, sans-serif;
-    color: #ffffff;
+    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
+    color: #f8f8f8;
+    font-size: 0.75rem;
     padding: 0.75rem;
 }
 
-.password {
-    font-family: 'BarlowItalic', Tahoma, Calibri, sans-serif;
+.fpassword {
+    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
     text-align: center;
-    color: rgb(95, 149, 221);
+    font-size: 0.75rem;
+    color: #81a2be;
+    padding: 2rem;
 }
 
 .logo {
     text-align: center;
+    margin: auto;
+    width: 128px;
+    height: auto;
+    padding: 1.5rem;
 }
 
 .center-h {
@@ -97,5 +118,23 @@ body {
    display: flex;
    align-items: center;
 }
-  
-  
+
+/*.avatar {
+    text-align: center;
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+    padding: 1.5rem;
+}*/
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #2b2b2b;
+    border: 1px solid #4e4e4e;
+    max-width: 200px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .75rem;
+}
