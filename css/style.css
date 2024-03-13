@@ -128,6 +128,25 @@ textarea {
     margin: 2rem;
     color: #e0e0e0;
 }
+.link {
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    display: block;
+    width: 11rem;
+    height: 3rem;
+    background-color: #3e3e3e;
+    border: 1px solid #4e4e4e;
+    border-radius: .75rem;
+    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin: 0.5rem;
+}
 
 .link {
     text-decoration: none;
@@ -169,6 +188,20 @@ textarea {
     margin: 0.5rem;
 }
 
+<<<<<<< HEAD
+
+.button-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+=======
+.button:hover {
+    border: 2px solid #979797;
+    color: #e0e0e0;
+    transition: 0.7s;
+>>>>>>> 822dabca3c28040ec8540fd476632a661f65a30f
+}
 
 .button-container {
     justify-content: center;
@@ -223,6 +256,7 @@ textarea {
     border-radius: .75rem;
 }
 
+<<<<<<< HEAD
 .center {
     display: flex;
     justify-content: center;
@@ -378,6 +412,8 @@ textarea {
     margin-bottom: 1.5rem;
 }
 
+=======
+>>>>>>> 822dabca3c28040ec8540fd476632a661f65a30f
 @media screen and (max-width: 720px) {
     .banner {
         font-size: 7vh;
