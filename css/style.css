@@ -27,14 +27,12 @@
 }
 
 body {
-    /*background-color: #1f1f1f;
+    /*Ensure that the content is centered
+    in the viewport*/
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;*/
-
-    place-items: center;
-    place-content: center;
-    /*min-height: 100vh;*/
+    align-items: center;
 }
 
 /*gradient background
@@ -182,9 +180,9 @@ textarea {
 }
 
 .logo {
-    text-align: center;
+    position: static;
     margin: 3rem;
-    width: 20vh;
+    width: 300px;
     height: auto;
     padding: 1.3rem;
 }
@@ -243,6 +241,15 @@ textarea {
 .button-shape-pill {
     padding: 1rem;
     width: 11rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+}
+
+.button-shape-flex {
+    padding: 1rem;
+    width: auto;
     height: 3rem;
     border-radius: 0.5rem;
     line-height: 1rem;
