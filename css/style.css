@@ -1,32 +1,4 @@
 @font-face {
-    font-family: "PublicSansRegular";
-    src: url('../fonts/publicsans-regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "PublicSansBold";
-    src: url('../fonts/publicsans-bold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: bold;
-}
-
-@font-face {
-    font-family: "PublicSansItalic";
-    src: url('../fonts/publicsans-italic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: bold;
-}
-
-@font-face {
-    font-family: "PublicSansLight";
-    src: url('../fonts/publicsans-light.woff2') format('woff2');
-    font-weight: normal;
-    font-style: light;
-}
-
-@font-face {
     font-family: "CantarellRegular";
     src: url('../fonts/cantarell-regular.otf') format('opentype');
     font-weight: normal;
@@ -188,19 +160,10 @@ textarea {
     margin: 0.5rem;
 }
 
-<<<<<<< HEAD
-
-.button-container {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-=======
 .button:hover {
     border: 2px solid #979797;
     color: #e0e0e0;
     transition: 0.7s;
->>>>>>> 822dabca3c28040ec8540fd476632a661f65a30f
 }
 
 .button-container {
@@ -249,14 +212,13 @@ textarea {
     z-index: 1;
     background: #2b2b2b;
     /*border: 1px solid #4e4e4e;*/
-    max-width: 200px;
+    max-width: auto;
     margin: auto;
     padding: 2rem;
     text-align: center;
     border-radius: .75rem;
 }
 
-<<<<<<< HEAD
 .center {
     display: flex;
     justify-content: center;
@@ -364,6 +326,8 @@ textarea {
 }
 
 .gnome-input {
+    font-family: 'CantarellRegular';
+    font-size: 8pt;
     display: inline-block;
     box-sizing: border-box;
     vertical-align: baseline;
@@ -412,8 +376,6 @@ textarea {
     margin-bottom: 1.5rem;
 }
 
-=======
->>>>>>> 822dabca3c28040ec8540fd476632a661f65a30f
 @media screen and (max-width: 720px) {
     .banner {
         font-size: 7vh;
