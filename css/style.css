@@ -28,39 +28,70 @@
 
 @font-face {
     font-family: "CantarellRegular";
-    src: url('../fonts/cantarell-regular.otf') format('otf');
+    src: url('../fonts/cantarell-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "CantarellBold";
-    src: url('../fonts/cantarell-bold.otf') format('otf');
+    src: url('../fonts/cantarell-bold.otf') format('opentype');
     font-weight: normal;
     font-style: bold;
 }
 
 @font-face {
     font-family: "CantarellExtraBold";
-    src: url('../fonts/cantarell-extrabold.otf') format('otf');
+    src: url('../fonts/cantarell-extrabold.otf') format('opentype');
     font-weight: normal;
     font-style: bold;
 }
 
 @font-face {
     font-family: "CantarellThin";
-    src: url('../fonts/cantarell-light.otf') format('otf');
+    src: url('../fonts/cantarell-light.otf') format('opentype');
     font-weight: normal;
     font-style: light;
 }
 
 body {
-    background-color: #1f1f1f;
+    /*background-color: #1f1f1f;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+
+    place-items: center;
+    place-content: center;
     /*min-height: 100vh;*/
 }
+
+/*gradient background
+html {
+    background: #3e3e3e; fallback
+    background: linear-gradient(135deg, #212121, #2B2B2B);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+*/
+html {
+    background: #1f1f1f;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensuring forms appearance are 
+consistent with the rest of the content
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+*/
 
 .container {
     display: flex;
@@ -83,7 +114,7 @@ body {
 }
 
 .copyright {
-    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
+    font-family: 'CantarellRegular';
     color: #f8f8f8;
     font-size: 0.75rem;
     padding: 0.10rem;
@@ -91,12 +122,13 @@ body {
 }
 
 .banner {
-    font-family: 'PublicSansBold', Tahoma, Calibri, sans-serif;
+    font-family: 'CantarellBold';
     font-size: 3.5rem;
     text-align: center;
     margin: 2rem;
     color: #e0e0e0;
 }
+
 .link {
     text-decoration: none;
     text-align: center;
@@ -137,11 +169,6 @@ body {
     margin: 0.5rem;
 }
 
-.button:hover {
-    border: 2px solid #979797;
-    color: #e0e0e0;
-    transition: 0.7s;
-}
 
 .button-container {
     justify-content: center;
@@ -151,7 +178,7 @@ body {
 }
 
 .fpassword {
-    font-family: 'PublicSansLight', Tahoma, Calibri, sans-serif;
+    font-family: 'CantarellRegular';
     text-align: center;
     font-size: 0.75rem;
     color: #81a2be;
@@ -160,7 +187,7 @@ body {
 
 .logo {
     text-align: center;
-    margin: auto;
+    margin: 3rem;
     width: 20vh;
     height: auto;
     padding: 1.3rem;
@@ -188,7 +215,7 @@ body {
     position: relative;
     z-index: 1;
     background: #2b2b2b;
-    border: 1px solid #4e4e4e;
+    /*border: 1px solid #4e4e4e;*/
     max-width: 200px;
     margin: auto;
     padding: 2rem;
@@ -196,24 +223,159 @@ body {
     border-radius: .75rem;
 }
 
-.gnome-blue {
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.button-base {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.button-shape-pill {
+    padding: 1rem;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+}
+
+.button-shape-pill-small {
+    padding: 1rem;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+}
+
+.button-shape-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+}
+
+.button-shape-pill:hover {
+    background-color: #757575;
+    transition: 0.3s;
+}
+
+.button-blue {
     font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: #81a2be;
+}
+
+.button-red {
+    font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: #cc6666;
+}
+
+.button-yellow {
+    font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #f1f1f1;;
+    background-color: #f0c674;
+}
+
+.button-green {
+    font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #414141;
+    background-color: #b5bd68;
+}
+
+.button-black {
+    font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: #373B37;
+}
+
+.gnome-input {
     display: inline-block;
     box-sizing: border-box;
     vertical-align: baseline;
     position: relative;
     padding: 1rem;
-    width: 11rem;
-    height: 3rem;
+    width: 13rem;
+    height: 1.5rem;
     color: #f1f1f1;
-    background-color: #81A2BE;
-    border-radius: 0.5rem;
+    background-color: #373B37;
+    border-radius: .6rem;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     line-height: 1rem;
     font-size: 1rem;
     cursor: pointer;
     margin: 0.5rem;
+}
+
+.form-login {
+    position: relative;
+    z-index: 1;
+    background: #2b2b2b;
+    /*border: 1px solid #4e4e4e;*/
+    width: auto;
+    margin: auto;
+    padding: 2rem;
+    border-radius: .75rem;
+}
+
+.form-content {
+    font-family: 'CantarellRegular';
+    font-size: 12pt;
+    color: #f1f1f1;
+    display: grid;
+    grid-gap: 0.5rem;
+    text-align: right;
+}
+
+.form-header {
+    font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: left;
+    font-size: 32pt;
+    color: #f1f1f1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 720px) {
