@@ -64,7 +64,7 @@ textarea {
 */
 
 .container {
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
 }
@@ -159,7 +159,7 @@ textarea {
 }
 
 .button:hover {
-    border: 2px solid #979797;
+    border: 2px solid #;
     color: #e0e0e0;
     transition: 0.7s;
 }
@@ -180,9 +180,7 @@ textarea {
 }
 
 .logo {
-    position: static;
-    margin: 3rem;
-    width: 300px;
+    size: 150px
     height: auto;
     padding: 1.3rem;
 }

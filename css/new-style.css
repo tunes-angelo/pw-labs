@@ -26,39 +26,271 @@
     font-style: light;
 }
 
+:root {
+    --dark-1: #1f1f1f;
+    --dark-2: #2b2b2b;
+    --dark-3: #373737;
+    --dark-4: #3e3e3e;
+    --dark-5: #414141;
+    --dark-6: #4e4e4e;
+    --dark-7: #757575;
+    --dark-8: #c5c8c6;
+    --white: #e0e0e0;
+    --red: #cc6666;
+    --blue: #81a2be;
+    --green: #b5bd68;
+    --yellow: #f0c674;
+}
+
 body {
     /*Ensure that the content is centered in the viewport*/
-    height: 100vh;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    font-family: 'CantarellRegular', sans-serif;
+    background: var(--dark-1);
+    /*font-size: ;*/
+    line-height: 1.2;
+}
+
+/* For gradient backgrounds
+html {
+    background: var(--dark-1);
+    width: 100%;
+    height: 100%;
+}*/
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.link {
+    font-family: 'CantarellRegular';
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #81a2be;
+    padding: 2rem;
+}
+
+.button-base {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.button-shape-pill {
+    font-family: 'CantarellBold';
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    cursor: pointer;
+    padding: 1rem;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+}
+
+.button-shape-pill-small {
+    font-family: 'CantarellBold';
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12pt;
+    cursor: pointer;
+    padding: 1rem;
+    width: 7rem;
+    height: 1.5rem;
+    border-radius: .5rem;
+    line-height: 1pt;
+}
+
+.button-shape-circle {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    line-height: 1rem;
+    margin: .5rem;
 }
 
-html {
-    background: #1f1f1f;
-    width: 100%;
-    height: 100%;
+.button-blue {
+    color: var(--white);
+    background-color: var(--blue);
 }
 
-.login-bg {
+.button-red {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+.button-green {
+    color: var(--dark-2);
+    background-color: var(--green);
+}
+
+.button-yellow {
+    color: var(--dark-2);
+    background-color: var(--yellow);
+}
+
+.button-black {
+    color: var(--white);
+    background-color: var(--dark-3);
+}
+
+.gnome-input {
+    font-family: 'CantarellRegular';
+    font-size: 8pt;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    position: relative;
+    padding: 1rem;
+    width: 13rem;
+    height: 1.5rem;
+    color: var(--white);
+    background-color: var(--dark-3);
+    border-radius: .6rem;
+    text-decoration: none;
+    text-align: left;
+    line-height: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.banner {
+    font-family: 'CantarellBold';
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner-center {
+    text-align: center;
+}
+
+.banner-left {
+    text-align: left;
+}
+
+.banner-right {
+    text-align: right;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 15%;
+}
+
+.form {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    background: var(--dark-2);
+    margin: auto;
+    padding: 24pt;
+    border-radius: .75rem;
+    width: 13rem;
+    justify-content: center;
+}
+
+.form-login {
     position: relative;
     z-index: 1;
-    background: #2b2b2b;
-    /*border: 1px solid #4e4e4e;*/
+    background: var(--dark-2);
     width: auto;
     margin: auto;
     padding: 2rem;
     border-radius: .75rem;
 }
 
-.form {
-    position: relative;
-    z-index: 1;
-    background: #2b2b2b;
-    /*border: 1px solid #4e4e4e;*/
-    max-width: auto;
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
-    border-radius: .75rem;
+.form-content {
+    font-family: 'CantarellRegular';
+    font-size: 12pt;
+    color: var(--white);
+    display: grid;
+    grid-gap: 0.5rem;
+    text-align: right;
+}
+
+.grid-login {
+    color: var(--white);
+    font-size: 12pt;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 0.3fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: 
+    "email-grid email-input ." 
+    "password-grid password-input ."
+    ". login-button forgot-password";
+}
+
+.email-grid {
+    grid-area: email-grid;
+}
+
+.email-input {
+    grid-area: email-input;
+    
+}
+
+.password-grid {
+    grid-area: password-grid;
+}
+
+.password-input {
+    grid-area: password-input;
+}
+
+.login-button {
+    grid-area: login-button;
+}
+
+.forgot-password {
+    grid-area: forgot-password;
+}
+
+.footer {
+    z-index: 7;
+    position: fixed;
+    text-align: left;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--dark-2);
+    color: var(--white);
+    /*border-top: 1px solid #4e4e4e;*/
+}
+
+.copyright {
+    font-family: 'CantarellRegular';
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 0.10rem;
+    margin: 0.30rem;
 }
