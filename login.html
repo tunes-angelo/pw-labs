@@ -1,36 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>pw-labs-001</title>
-        <link rel="stylesheet" href="css/new-style.css">
+        <link rel="stylesheet" href="css/login.css">
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
     <body>
         <main>
           <div>
-            <a href="index.html" class="button-base button-shape-pill-small button-black">< Back</a>
+            <a class="back-button" href="index.html">‹ Back</a>
           </div>
-          <div class="content-center">
-            <div>
-              <h1 class="banner banner-left">Login</h1>
-              <div class="form-login">
-                <div class="form-content">
-                  <label for="email">Email<input class="gnome-input" type="email" placeholder="Email" id="email" name="fname"></label>
-                  <label for="password">Password<input class="gnome-input" type="text" placeholder="Password"id="password" name="fname"></label>
-                  <div class="banner-left">
-                    <a href="#" class="button-base button-shape-pill-small button-blue">Login</a>
-                  </div>
-                    <a href="#" class="link">Forgot password?</a>
-                </div>
+            <h1 class="banner banner-left">Login</h1>
+            
+            <div class="login-main">
+              
+              <div class="email-label">
+                <label for="email">email</label>
+              </div>
+
+              <div class="pwd-label">
+                <label for="pwd">password</label>
+              </div>
+            
+              <div class="email-input">
+                <input type="email" id="email" name="email">
+              </div>
+
+              <div class="pwd-input">
+                <input type="password" id="pwd" name="pwd">
+              </div>
+              <div class="login-label">
+                <button name="login" class="login-button">Login</button>
+              </div>
+              <div class="forgot-pwd-label">
+                <a class="pwd-link" href="forgot-pwd.html">Forgot password?</a>
               </div>
             </div>
-          </div>
-          <div class="footer">
-        <p class="copyright">Copyright 2024 - All rights reserved by Miguel Antunes @ IPVC</p>
-      </div>
+            <div class="footer">Copyright 2024 - All rights reserved by <a class="mail-link" href="mailto:miguelangelo@ipvc.pt">Miguel Antunes</a> @ IPVC</div>
         </main>    
     </body>
 </html>

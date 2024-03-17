@@ -5,33 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>pw-labs-001</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/signup.css">
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
     <body>
         <main>
           <div>
-            <a href="index.html" class="button-base button-shape-pill-small button-black">Back</a>
+            <a class="back-button" href="index.html">‹ Back</a>
           </div>
-          <div class="content-center">
-            <div>
-              <div class="form-header">
-                Sign Up
-              </div>
-              <div class="form-login">
-                <div class="form-content">
-                  <label for="name">* Name<input class="gnome-input" type="text" placeholder="" id="name" name="fname"></label>
-                  <label for="email">* Email<input class="gnome-input" type="text" placeholder="" id="email" name="femail"></label>
-                  <label for="password">* Password<input class="gnome-input" type="password" placeholder="" id="password" name="fpassword"></label>
-                  <label for="name">* Re-type Password<input class="gnome-input" type="password" placeholder="" id="repassword" name="frepassword"></label>
-                  <a href="#" class="button-base button-shape-pill-small button-blue">Login</a>
-                </div>
-              </div>
-        </div>
-      </div>
-      <div class="footer">
-        <p class="copyright">Copyright 2024 - All rights reserved by Miguel Antunes @ IPVC</p>
-      </div>
+          <h1 class="banner banner-left">Sign Up</h1>
+          <div class="signup-main">
+            <div class="signup-name-label">
+              <label for="name">name</label>
+            </div>
+            <div class="signup-email-label">
+              <label for="email">email</label>
+            </div>
+            <div class="signup-password-label">
+              <label for="password">password</label>
+            </div>
+            <div class="signup-repassword-label">
+              <label for="password">retype password</label>
+            </div>       
+            <div class="signup-agree-label">
+              <input type="checkbox" checked="checked" id="check-agree" name="check-agree">
+              <label class="signup-agree-link" for="agree">I agree to the <a class="signup-links" href="#">Terms of Use</a> and <a class="signup-links" href="#">Privacy Policy</a>.</label>
+            </div>
+            <div class="signup-name-input">
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="signup-email-input">
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="signup-pwd-input">
+              <input type="password" id="pwd" name="pwd">
+            </div>
+            <div class="signup-pwd-retype-input">
+              <input type="password" id="retype-pwd" name="retype-pwd">
+            </div>
+            <div class="signup-button-label">
+              <button name="signup" class="signup-button">Sign up</button>
+            </div>
+            <div class="signup-learmore-label">
+              <a class="signup-links" href="#">Learn more</a>
+            </div>
+          </div>
+          <div class="footer">Copyright 2024 - All rights reserved by <a class="mail-link" href="mailto:miguelangelo@ipvc.pt">Miguel Antunes</a> @ IPVC</div>
         </main>    
     </body>
 </html>

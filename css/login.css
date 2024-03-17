@@ -80,14 +80,6 @@ html {
     height: 100%;
 }*/
 
-.logo-img {
-    display: block;
-    margin: auto;
-    width: 192px;
-    height: auto;
-    padding: 16px;
-}
-
 .button-base {
     display: inline-block;
     box-sizing: border-box;
@@ -133,7 +125,7 @@ html {
 
 .button-black {
     color: var(--white);
-    background-color: var(--dark-7);
+    background-color: var(--dark-3);
 }
 
 /*****************************************/
@@ -158,16 +150,11 @@ html {
     text-align: right;
 }
 
-.index-login {
-    display: grid;
-    column-gap: 8px;
-    row-gap: 16px;
-    /*gap: 32px;*/
-    background: var(--dark-2);
-    border-radius: 7px;
-    /*justify-items: center;*/
-    align-items: center;
-    padding: var(--x-32);
+.logo {
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 15%;
 }
 
 /* NEW LOGIN FORM 
@@ -304,16 +291,13 @@ input:focus {
     transition: 0.5s;
 }
 
-.forgot-pwd {
-    padding: 32px;
-    text-align: center;
-}
-.forgot-pwd-link {
+.pwd-link {
     font-size: var(--x-12);
+    background-color: var(--dark-2);
     color: var(--white);
 }
 
-.forgot-pwd-link:hover {
+.pwd-link:hover {
     color: var(--blue);
     transition: 0.5s;
 }
@@ -372,4 +356,16 @@ input:focus {
     font-size: var(--x-12);
     background-color: var(--dark-4);
     color: var(--blue);
+}
+
+.index-login {
+    display: grid;
+    column-gap: 8px;
+    row-gap: 16px;
+    /*gap: 32px;*/
+    background: var(--dark-2);
+    border-radius: 7px;
+    /*justify-items: center;*/
+    align-items: center;
+    padding: var(--x-32);
 }
