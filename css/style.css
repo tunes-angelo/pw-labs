@@ -27,6 +27,7 @@
 }
 
 :root {
+    /* PALETTE */
     --dark-1: #1f1f1f;
     --dark-2: #2b2b2b;
     --dark-3: #373737;
@@ -40,7 +41,7 @@
     --blue: #81a2be;
     --green: #b5bd68;
     --yellow: #f0c674;
-
+    /* FONT SIZE */
     --x-12: 12px;
     --x-14: 14px;
     --x-16: 16px;
@@ -58,35 +59,237 @@
     --x-76: 76px;
     --x-84: 84px;
     --x-92: 92px;
+    /* GRID POSITION */
+    --l1-c1: 1 / 1 / 1 / 1;
+    --l1-c2: 2 / 1 / 2 / 1;
+    --l2-c2: 2 / 2 / 2 / 2;
+    --l3-c1: 3 / 1 / 3 / 1;
+    --l3-c2: 3 / 2 / 3 / 2;
+    --l3-c3: 3 / 3 / 3 / 3;
+    --l4-c1: 4 / 1 / 4 / 1;
+    --l5-c2: 5 / 2 / 5 / 2;
+    --l6-c2: 6 / 2 / 6 / 2;
+    --l6-c3: 6 / 3 / 6 / 3;
+    --l1-c2-s2: 1 / 2 / 1 / span 2;
+    --l2-c2-s2: 2 / 2 / 2 / span 2;
+    --l3-c2-s2: 3 / 2 / 3 / span 2;
+    --l4-c2-s2: 4 / 2 / 4 / span 2;
+    --l5-c2-s2: 5 / 2 / 5 / span 2;
 }
+
+/*****************/
+/* MAIN ELEMENTS */
+/*****************/
 
 body {
-    /*Ensure that the content is centered in the viewport*/
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: 'CantarellRegular', sans-serif;
     background: var(--dark-1);
+    display: flex;
+    font-family: 'CantarellRegular', sans-serif;
+    height: 100vh;
+    justify-content: center;
     margin: auto;
-    /*font-size: ;*/
-    /*line-height: 1.2;*/
 }
 
-/* For gradient backgrounds
-html {
-    background: var(--dark-1);
-    width: 100%;
-    height: 100%;
-}*/
+label {
+    color: var(--white);
+    font-family: 'CantarellBold';
+    font-size: var(--x-16);
+}
 
-.logo-img {
-    display: block;
-    margin: auto;
-    width: 192px;
-    height: auto;
+input {
+    background-color: var(--dark-2);
+    border: none;
+    border-bottom: 1px solid var(--dark-7);
+    box-sizing: border-box;
+    color: var(--white);
+    font-family: 'CantarellRegular';
+    font-size: var(--x-14);
+    padding: 8px 0 4px 8px;
+    width: 100%;
+    /*border-top-left-radius: 7px;
+    border-top-right-radius: 7px;*/
+}
+
+input:focus {
+    background-color: var(--dark-3);
+    border-bottom: 1px solid var(--white);
+    caret-color: var(--blue);
+    outline: none;
+    transition: 0.5s;
+}
+
+input[type='checkbox']{
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/*********/
+/* GRIDS */
+/*********/
+
+.index-login {
+    display: grid;
+    column-gap: 8px;
+    row-gap: 16px;
+    /*gap: 32px;*/
+    background: var(--dark-2);
+    border-radius: 7px;
+    /*justify-items: center;*/
+    align-items: center;
+    padding: var(--x-32);
+}
+
+.login-main {
+    display: grid;
+    grid-template-columns: 100px 150px 150px;
+    grid-template-rows: 50px 50px 50px;
+    column-gap: 8px;
+    row-gap: 16px;
+    /*gap: 32px;*/
+    background: var(--dark-2);
+    border-radius: 7px;
+    /*justify-items: center;*/
+    align-items: center;
+    padding: var(--x-32);
+}
+
+.forgot-main-form {
+    display: grid;
+    grid-template-columns: 100px 150px 150px;
+    grid-template-rows: 50px 50px;
+    column-gap: 8px;
+    row-gap: 16px;
+    /*gap: 32px;*/
+    background: var(--dark-2);
+    border-radius: 7px;
+    /*justify-items: center;*/
+    align-items: center;
+    padding: var(--x-32);
+}
+
+.signup-main {
+    display: grid;
+    grid-template-columns: 100px 150px 150px;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    column-gap: 8px;
+    row-gap: 16px;
+    /*gap: 32px;*/
+    background: var(--dark-2);
+    border-radius: 7px;
+    /*justify-items: center;*/
+    align-items: center;
+    padding: var(--x-32);
+}
+
+/**********/
+/* LABELS */
+/**********/
+
+.email-label,.forgot-email-label,.signup-name-label {
+    grid-area: var(--l1-c1);
+    padding: 16px 0 0 0;
+    text-align: right;
+    align-self: end;
+}
+
+.pwd-label,.signup-email-label {
+    grid-area: var(--l1-c2);
+    padding: 16px 0 0 0;
+    text-align: right;
+    align-self: end;
+}
+
+.login-label {
+    grid-area: var(--l3-c2);
     padding: 16px;
 }
+
+.forgot-pwd-label {
+    grid-area: var(--l3-c3);
+    align-self: center;
+    padding: 16px;
+}
+
+.forgot-button-label {
+    grid-area: var(--l2-c2);
+    padding: 16px;
+    width: max-content;
+}
+
+.signup-password-label {
+    grid-area: var(--l3-c1);
+    padding: 16px 0 0 0;
+    text-align: right;
+    align-self: end;
+}
+
+.signup-repassword-label {
+    grid-area: var(--l4-c1);
+    padding: 16px 0 0 0;
+    text-align: right;
+    align-self: end;
+}
+
+.signup-button-label {
+    grid-area: var(--l6-c2);
+    padding: 16px;
+}
+
+.signup-learmore-label {
+    grid-area: var(--l6-c3);
+    align-self: center;
+    padding: 16px;
+}
+
+.signup-agree-label {
+    grid-area: var(--l5-c2-s2);
+    align-self: center;
+    padding: 16px;
+}
+
+/**********/
+/* INPUTS */
+/**********/
+
+.email-input,.forgot-email-input,.signup-name-input {
+    grid-area: var(--l1-c2-s2);
+    padding: 16px 16px 0 16px;
+    align-self: end;
+}
+
+.pwd-input,.signup-email-input {
+    grid-area: var(--l2-c2-s2);
+    padding: 16px 16px 0 16px;
+    align-self: end;
+}
+
+.signup-pwd-input {
+    grid-area: var(--l3-c2-s2);
+    padding: 16px 16px 0 16px;
+    align-self: end;
+}
+
+.signup-pwd-retype-input {
+    grid-area: var(--l4-c2-s2);
+    padding: 16px 16px 0 16px;
+    align-self: end;
+}
+
+.signup-agree-input {
+    grid-area: var(--l5-c2);
+    align-self: center;
+    padding: 16px;
+}
+
+
+/***********/
+/* BUTTONS */
+/***********/
 
 .button-base {
     display: inline-block;
@@ -102,13 +305,6 @@ html {
     text-align: center;
     padding: 16px;
     border-radius: 7px;
-}
-
-.button-shape-pill-small {
-
-}
-
-.button-shape-circle {
 }
 
 .button-blue {
@@ -136,7 +332,95 @@ html {
     background-color: var(--dark-7);
 }
 
-/*****************************************/
+.back-button {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    font-family: 'CantarellBold';
+    font-size: var(--x-16);
+    background-color: var(--dark-4);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    padding: 8px 32px 8px 32px;
+    cursor: pointer;
+}
+
+.login-button,.signup-button,.forgot-pwd-button {
+    font-family: 'CantarellBold';
+    font-size: var(--x-16);
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    padding: 8px 32px 8px 32px;
+    cursor: pointer;
+}
+
+.back-button:hover,.login-button:hover,.signup-button:hover,.forgot-pwd-button:hover {
+    background-color: var(--dark-7);
+    transition: 0.5s;
+}
+
+.signup-links:hover,.forgot-pwd-link:hover,.pwd-link:hover {
+    color: var(--blue);
+    transition: 0.5s;
+}
+
+/*********/
+/* LINKS */
+/*********/
+
+.signup-links,.signup-agree-link,.pwd-link {
+    font-size: var(--x-12);
+    background-color: var(--dark-2);
+    color: var(--white);
+}
+
+.forgot-pwd-link {
+    font-size: var(--x-12);
+    color: var(--white);
+}
+
+.mail-link {
+    font-size: var(--x-12);
+    background-color: var(--dark-4);
+    color: var(--blue);
+}
+
+.forgot-pwd {
+    padding: 32px;
+    text-align: center;
+}
+
+/********/
+/* MISC */
+/********/
+
+.logo-img {
+    display: block;
+    margin: auto;
+    width: 192px;
+    height: auto;
+    padding: 16px;
+}
+
+.footer {
+    position: fixed;
+    text-align: left;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--dark-4);
+    color: var(--white);
+    font-size: var(--x-12);
+    font-family: 'CantarellBold';
+    padding: 8px 0 8px 8px;
+    margin: 8px 0 0 0;
+}
+
 .banner {
     font-family: 'CantarellBold';
     color: var(--white);
@@ -156,220 +440,4 @@ html {
 
 .banner-right {
     text-align: right;
-}
-
-.index-login {
-    display: grid;
-    column-gap: 8px;
-    row-gap: 16px;
-    /*gap: 32px;*/
-    background: var(--dark-2);
-    border-radius: 7px;
-    /*justify-items: center;*/
-    align-items: center;
-    padding: var(--x-32);
-}
-
-/* NEW LOGIN FORM 
-
-GRID
-https://css-tricks.com/snippets/css/complete-guide-grid/
-
--> Align items in row axis (inline)
-justify-items - > overall grid
-justify-self -> individual grid items
-start | end | center | stretch
-
--> Align items in column axis (block)
-(applies to all grid items inside the container)
-align-items: start | end | center | stretch; 
-align-self -> individual grid items
-
--> Single declaration (align-items and justify-items properties)
-place-items: <align-items> / <justify-items>
-The first value sets align-items, the second value justify-items. 
-If the second value is omitted, the first value is assigned to both properties.
-
-
-Spacing out the grid inside the container
-
--> Set the alignment of the grid within the grid container row axis (inline)
-justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
-
--> Set the alignment of the grid within the grid container column axis (block)
-align-content: start | end | center | stretch | space-around | space-between | space-evenly;
-
--> Single declaration
-place-content: <align-content> / <justify-content>
-place-self -> individual grid items
-GRID ITEMS*/
-
-.login-main {
-    display: grid;
-    grid-template-columns: 100px 150px 150px;
-    grid-template-rows: 50px 50px 50px;
-    column-gap: 8px;
-    row-gap: 16px;
-    /*gap: 32px;*/
-    background: var(--dark-2);
-    border-radius: 7px;
-    /*justify-items: center;*/
-    align-items: center;
-    padding: var(--x-32);
-}
-
-.email-label {
-    grid-area: 1 / 1 / 1 / 1;
-    padding: 16px 0 0 0;
-    text-align: right;
-    align-self: end;
-}
-
-.pwd-label {
-    grid-area: 2 / 1 / 2 / 1;
-    padding: 16px 0 0 0;
-    text-align: right;
-    align-self: end;
-}
-
-.email-input {
-    grid-area: 1 / 2 / 1 / span 2;
-    padding: 16px 16px 0 16px;
-    align-self: end;
-}
-
-.pwd-input {
-    grid-column: 2 / span 2;
-    grid-row: 2 / 2;
-    padding: 16px 16px 0 16px;
-    align-self: end;
-}
-
-.login-label {
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
-    padding: 16px;
-}
-
-.forgot-pwd-label {
-    grid-column: 3 / 3;
-    grid-row: 3 / 3;
-    align-self: center;
-    padding: 16px;
-}
-
-label {
-    font-family: 'CantarellBold';
-    font-size: var(--x-16);
-    color: var(--white);
-}
-
-input {
-    font-family: 'CantarellRegular';
-    font-size: var(--x-14);
-    border: none;
-    border-bottom: 1px solid var(--dark-7);
-    /*border-top-left-radius: 7px;
-    border-top-right-radius: 7px;*/
-    width: 100%;
-    background-color: var(--dark-2);
-    box-sizing: border-box;
-    color: var(--white);
-    padding: 8px 0 4px 8px;
-    caret-shape: underscore;
-}
-
-input:focus {
-    outline: none;
-    border-bottom: 1px solid var(--white);
-    background-color: var(--dark-4);
-    transition: 0.5s;
-    caret-color: var(--blue);
-}
-
-.login-button {
-    font-family: 'CantarellBold';
-    font-size: var(--x-16);
-    background-color: var(--blue);
-    color: var(--white);
-    border: none;
-    border-radius: 7px;
-    text-decoration: none;
-    padding: 8px 32px 8px 32px;
-    cursor: pointer;
-}
-
-.login-button:hover{
-    background-color: var(--dark-7);
-    transition: 0.5s;
-}
-
-.forgot-pwd {
-    padding: 32px;
-    text-align: center;
-}
-.forgot-pwd-link {
-    font-size: var(--x-12);
-    color: var(--white);
-}
-
-.forgot-pwd-link:hover {
-    color: var(--blue);
-    transition: 0.5s;
-}
-
-.back-button {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right:;
-    font-family: 'CantarellBold';
-    font-size: var(--x-16);
-    background-color: var(--dark-4);
-    color: var(--white);
-    border: none;
-    border-radius: 7px;
-    text-decoration: none;
-    padding: 8px 32px 8px 32px;
-    cursor: pointer;
-}
-
-.back-button {
-    position: fixed;
-    top: 16px;
-    left: 16px;
-    font-family: 'CantarellBold';
-    font-size: var(--x-16);
-    background-color: var(--dark-4);
-    color: var(--white);
-    border: none;
-    border-radius: 7px;
-    text-decoration: none;
-    padding: 8px 32px 8px 32px;
-    cursor: pointer;
-}
-
-.back-button:hover {
-    background-color: var(--dark-7);
-    transition: 0.5s;
-}
-
-.footer {
-    position: fixed;
-    text-align: left;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    background-color: var(--dark-4);
-    color: var(--white);
-    font-size: var(--x-12);
-    font-family: 'CantarellBold';
-    padding: 8px 0 8px 8px;
-    margin: 8px 0 0 0;
-}
-
-.mail-link {
-    font-size: var(--x-12);
-    background-color: var(--dark-4);
-    color: var(--blue);
 }
